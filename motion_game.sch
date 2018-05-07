@@ -1415,18 +1415,6 @@ Sizes: 0402, 0603 &amp; 0805</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="VDD_5V" prefix="SUPPLY">
-<gates>
-<gate name="G$1" symbol="VDD_3P3V" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MPU-9250" uservalue="yes">
 <description>MPU-9250 9-axis IMU</description>
 <gates>
@@ -2303,6 +2291,11 @@ chip, wave soldering</description>
 <text x="0" y="-2.54" size="1.778" layer="94">+</text>
 <text x="6.35" y="-2.54" size="1.778" layer="94">-</text>
 </symbol>
+<symbol name="VDD_5V">
+<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
+<pin name="SYS_VDD1_3P3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="4.064" size="1.778" layer="96" align="center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MOD-LED8X8RGB-OUTLINE">
@@ -2548,6 +2541,18 @@ chip, wave soldering</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="VDD_5V" prefix="SUPPLY">
+<gates>
+<gate name="G$2" symbol="VDD_5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -2593,18 +2598,14 @@ chip, wave soldering</description>
 <part name="GND12" library="motion_game" deviceset="GND" device=""/>
 <part name="GND5" library="motion_game" deviceset="GND" device=""/>
 <part name="GND6" library="motion_game" deviceset="GND" device=""/>
-<part name="SUPPLY6" library="motion_game" deviceset="VDD_5V" device=""/>
-<part name="SUPPLY10" library="motion_game" deviceset="VDD_5V" device=""/>
 <part name="SUPPLY2" library="motion_game" deviceset="VDD_3P3V" device=""/>
 <part name="U$1" library="motion_game" deviceset="MPU-9250" device=""/>
 <part name="GND3" library="motion_game" deviceset="GND" device=""/>
 <part name="GND13" library="motion_game" deviceset="GND" device=""/>
 <part name="GND14" library="motion_game" deviceset="GND" device=""/>
 <part name="SUPPLY11" library="motion_game" deviceset="VDD_3P3V" device=""/>
-<part name="SUPPLY12" library="motion_game" deviceset="VDD_5V" device=""/>
 <part name="GND15" library="motion_game" deviceset="GND" device=""/>
 <part name="GND16" library="motion_game" deviceset="GND" device=""/>
-<part name="SUPPLY13" library="motion_game" deviceset="VDD_5V" device=""/>
 <part name="SUPPLY14" library="motion_game" deviceset="VDD_3P3V" device=""/>
 <part name="R7" library="motion_game" deviceset="R_" device="R0603" value="2.2k"/>
 <part name="R8" library="motion_game" deviceset="R_" device="R0603" value="2.2k"/>
@@ -2619,6 +2620,10 @@ chip, wave soldering</description>
 <part name="U$7" library="Maze_game" deviceset="MOD-LED8X8RGB-OUTLINE" device=""/>
 <part name="U$12" library="Maze_game" deviceset="MOD-LED8X8RGB-OUTLINE" device=""/>
 <part name="U$8" library="Maze_game" deviceset="BUZZER_CEM-1203" device=""/>
+<part name="SUPPLY8" library="Maze_game" deviceset="VDD_5V" device=""/>
+<part name="SUPPLY12" library="Maze_game" deviceset="VDD_5V" device=""/>
+<part name="SUPPLY6" library="Maze_game" deviceset="VDD_5V" device=""/>
+<part name="SUPPLY10" library="Maze_game" deviceset="VDD_5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2649,7 +2654,7 @@ chip, wave soldering</description>
 <instance part="SUPPLY3" gate="G$1" x="22.86" y="233.68"/>
 <instance part="GND7" gate="1" x="68.58" y="58.42"/>
 <instance part="SUPPLY5" gate="G$1" x="22.86" y="157.48"/>
-<instance part="SUPPLY7" gate="G$1" x="22.86" y="78.74"/>
+<instance part="SUPPLY7" gate="G$1" x="22.86" y="81.28"/>
 <instance part="SUPPLY4" gate="G$1" x="22.86" y="195.58"/>
 <instance part="SUPPLY9" gate="G$1" x="22.86" y="119.38"/>
 <instance part="R1" gate="G$1" x="22.86" y="185.42" rot="R90"/>
@@ -2663,18 +2668,14 @@ chip, wave soldering</description>
 <instance part="GND12" gate="1" x="68.58" y="210.82"/>
 <instance part="GND5" gate="1" x="132.08" y="114.3"/>
 <instance part="GND6" gate="1" x="132.08" y="73.66"/>
-<instance part="SUPPLY6" gate="G$1" x="132.08" y="139.7"/>
-<instance part="SUPPLY10" gate="G$1" x="132.08" y="99.06"/>
 <instance part="SUPPLY2" gate="G$1" x="195.58" y="231.14"/>
 <instance part="U$1" gate="G$1" x="170.18" y="198.12"/>
 <instance part="GND3" gate="1" x="195.58" y="162.56"/>
 <instance part="GND13" gate="1" x="332.74" y="88.9"/>
 <instance part="GND14" gate="1" x="353.06" y="170.18"/>
 <instance part="SUPPLY11" gate="G$1" x="345.44" y="236.22"/>
-<instance part="SUPPLY12" gate="G$1" x="332.74" y="236.22"/>
 <instance part="GND15" gate="1" x="238.76" y="147.32"/>
 <instance part="GND16" gate="1" x="274.32" y="91.44"/>
-<instance part="SUPPLY13" gate="G$1" x="271.78" y="236.22"/>
 <instance part="SUPPLY14" gate="G$1" x="261.62" y="236.22"/>
 <instance part="R7" gate="G$1" x="254" y="226.06" rot="R90"/>
 <instance part="R8" gate="G$1" x="243.84" y="226.06" rot="R90"/>
@@ -2689,6 +2690,10 @@ chip, wave soldering</description>
 <instance part="U$7" gate="G$1" x="200.66" y="114.3"/>
 <instance part="U$12" gate="G$1" x="200.66" y="73.66"/>
 <instance part="U$8" gate="G$1" x="360.68" y="182.88" rot="R270"/>
+<instance part="SUPPLY8" gate="G$2" x="271.78" y="236.22"/>
+<instance part="SUPPLY12" gate="G$2" x="332.74" y="236.22"/>
+<instance part="SUPPLY6" gate="G$2" x="132.08" y="139.7"/>
+<instance part="SUPPLY10" gate="G$2" x="132.08" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -2825,102 +2830,34 @@ chip, wave soldering</description>
 <junction x="193.04" y="38.1"/>
 </segment>
 </net>
-<net name="SYS_VDD1_3P3V" class="0">
+<net name="VDD_5V" class="0">
 <segment>
-<pinref part="SUPPLY7" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="SUPPLY9" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="22.86" y1="116.84" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="SUPPLY5" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="22.86" y1="152.4" x2="22.86" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="SUPPLY4" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="22.86" y1="190.5" x2="22.86" y2="193.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY3" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<pinref part="R0" gate="G$1" pin="2"/>
-<wire x1="22.86" y1="231.14" x2="22.86" y2="228.6" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY6" gate="G$1" pin="SYS_VDD1_3P3V"/>
 <wire x1="132.08" y1="137.16" x2="132.08" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="5V"/>
 <wire x1="132.08" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="SUPPLY6" gate="G$2" pin="SYS_VDD1_3P3V"/>
+<label x="121.92" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SUPPLY10" gate="G$1" pin="SYS_VDD1_3P3V"/>
 <wire x1="132.08" y1="96.52" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="5V"/>
 <wire x1="132.08" y1="91.44" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SUPPLY10" gate="G$2" pin="SYS_VDD1_3P3V"/>
 </segment>
 <segment>
-<pinref part="SUPPLY1" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="152.4" y1="220.98" x2="144.78" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="220.98" x2="144.78" y2="228.6" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="218.44" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="218.44" x2="144.78" y2="220.98" width="0.1524" layer="91"/>
-<junction x="144.78" y="220.98"/>
-<wire x1="152.4" y1="182.88" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="182.88" x2="144.78" y2="215.9" width="0.1524" layer="91"/>
-<junction x="144.78" y="218.44"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="215.9" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="215.9" x2="132.08" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="215.9" x2="121.92" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="215.9" x2="121.92" y2="210.82" width="0.1524" layer="91"/>
-<junction x="144.78" y="215.9"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="132.08" y1="210.82" x2="132.08" y2="215.9" width="0.1524" layer="91"/>
-<junction x="132.08" y="215.9"/>
-<pinref part="U$1" gate="G$1" pin="RESV1"/>
-<pinref part="U$1" gate="G$1" pin="VDDIO"/>
-<pinref part="U$1" gate="G$1" pin="VDD"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="NCS"/>
-<pinref part="SUPPLY2" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="187.96" y1="215.9" x2="195.58" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="215.9" x2="195.58" y2="228.6" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY12" gate="G$1" pin="SYS_VDD1_3P3V"/>
 <wire x1="327.66" y1="228.6" x2="332.74" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="228.6" x2="332.74" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="VOUT@2"/>
+<label x="327.66" y="228.6" size="1.778" layer="95"/>
+<pinref part="SUPPLY12" gate="G$2" pin="SYS_VDD1_3P3V"/>
 </segment>
 <segment>
-<pinref part="SUPPLY11" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="327.66" y1="226.06" x2="345.44" y2="226.06" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="226.06" x2="345.44" y2="233.68" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="3.3V@1"/>
-</segment>
-<segment>
-<pinref part="SUPPLY13" gate="G$1" pin="SYS_VDD1_3P3V"/>
 <wire x1="271.78" y1="233.68" x2="271.78" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="228.6" x2="276.86" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="VOUT@1"/>
-</segment>
-<segment>
-<pinref part="SUPPLY14" gate="G$1" pin="SYS_VDD1_3P3V"/>
-<wire x1="261.62" y1="233.68" x2="261.62" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="231.14" x2="261.62" y2="226.06" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="226.06" x2="276.86" y2="226.06" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="254" y1="231.14" x2="261.62" y2="231.14" width="0.1524" layer="91"/>
-<junction x="261.62" y="231.14"/>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="243.84" y1="231.14" x2="254" y2="231.14" width="0.1524" layer="91"/>
-<junction x="254" y="231.14"/>
-<pinref part="U3" gate="G$1" pin="3.3V@2"/>
+<label x="266.7" y="228.6" size="1.778" layer="95"/>
+<label x="266.7" y="228.6" size="1.778" layer="95"/>
+<pinref part="SUPPLY8" gate="G$2" pin="SYS_VDD1_3P3V"/>
 </segment>
 </net>
 <net name="BTN0" class="0">
@@ -3187,6 +3124,90 @@ chip, wave soldering</description>
 <wire x1="327.66" y1="142.24" x2="337.82" y2="142.24" width="0.1524" layer="91"/>
 <label x="330.2" y="142.24" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="GPIO52"/>
+</segment>
+</net>
+<net name="VDD_3V" class="0">
+<segment>
+<pinref part="SUPPLY3" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<pinref part="R0" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="231.14" x2="22.86" y2="228.6" width="0.1524" layer="91"/>
+<label x="22.86" y="228.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY4" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="22.86" y1="190.5" x2="22.86" y2="193.04" width="0.1524" layer="91"/>
+<label x="22.86" y="190.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SUPPLY1" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="152.4" y1="220.98" x2="144.78" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="220.98" x2="144.78" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="218.44" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="218.44" x2="144.78" y2="220.98" width="0.1524" layer="91"/>
+<junction x="144.78" y="220.98"/>
+<wire x1="152.4" y1="182.88" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="182.88" x2="144.78" y2="215.9" width="0.1524" layer="91"/>
+<junction x="144.78" y="218.44"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="215.9" x2="144.78" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="215.9" x2="132.08" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="215.9" x2="121.92" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="215.9" x2="121.92" y2="210.82" width="0.1524" layer="91"/>
+<junction x="144.78" y="215.9"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="210.82" x2="132.08" y2="215.9" width="0.1524" layer="91"/>
+<junction x="132.08" y="215.9"/>
+<pinref part="U$1" gate="G$1" pin="RESV1"/>
+<pinref part="U$1" gate="G$1" pin="VDDIO"/>
+<pinref part="U$1" gate="G$1" pin="VDD"/>
+<label x="134.62" y="226.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="NCS"/>
+<pinref part="SUPPLY2" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="187.96" y1="215.9" x2="195.58" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="215.9" x2="195.58" y2="228.6" width="0.1524" layer="91"/>
+<label x="198.12" y="226.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SUPPLY14" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="261.62" y1="233.68" x2="261.62" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="231.14" x2="261.62" y2="226.06" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="226.06" x2="276.86" y2="226.06" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="254" y1="231.14" x2="261.62" y2="231.14" width="0.1524" layer="91"/>
+<junction x="261.62" y="231.14"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="243.84" y1="231.14" x2="254" y2="231.14" width="0.1524" layer="91"/>
+<junction x="254" y="231.14"/>
+<pinref part="U3" gate="G$1" pin="3.3V@2"/>
+<label x="254" y="233.68" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SUPPLY11" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="327.66" y1="226.06" x2="345.44" y2="226.06" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="226.06" x2="345.44" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="3.3V@1"/>
+<label x="332.74" y="226.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SUPPLY7" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="78.74" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+<label x="25.4" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="SUPPLY9" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="22.86" y1="116.84" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
+<label x="22.86" y="114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="SUPPLY5" gate="G$1" pin="SYS_VDD1_3P3V"/>
+<wire x1="22.86" y1="152.4" x2="22.86" y2="154.94" width="0.1524" layer="91"/>
+<label x="22.86" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
